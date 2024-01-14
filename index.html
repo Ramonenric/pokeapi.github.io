@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>PokeApi</title>
+</head>
+<body>
+    <img src="pokeapi_256.svg" alt="PokeAPI" width="150" height="50" class="imagen">
+    <div id="barra">
+        <div id="dades">
+            <li>Elige cuántos Pokemon quieres</li>
+            <input type="number" id="numPoke">
+            <button id="addPoke" onclick="showText()">Get Pokemons</button>
+        </div>
+        <input type="text" id="input" oninput="searchPokemon()" placeholder="Search Pokemon">
+    </div>
+    <div id="pokeList"></div>
+    <!--<div id="text" hidden="true">Selecciona dos Pokemons i pulsa Fight! para iniciar</div>
+    <button id="fightBtn" hidden="true"onclick="fight()">Fight!</button>
+    <button id="endBtn" hidden="true" onclick="resetAll()">End Fight</button>-->
+    <div id="fightSection">
+        <div id="text">Selecciona dos Pokemons i pulsa Fight! para iniciar</div>
+        <div id="buttons">
+            <button id="fightBtn" hidden="true" onclick="fight()">Fight!</button>
+            <button id="endBtn" hidden="true" onclick="resetAll()">End Fight</button>
+        </div>
+    </div>
+
+    <template id="poke-template">
+        <article data-num="" data-name="" data-attack="" data-defense="" data-color="false" onclick="colorButton(this)">
+            <h2 id="name"></h2>
+            <img src="" alt="">
+            <p id="types"></p>
+            <p id="stats"></p>
+        </article>
+    </template>
+    <script src="script.js"></script>
+</body>
+</html>
+
